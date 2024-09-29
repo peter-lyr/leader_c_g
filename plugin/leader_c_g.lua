@@ -1,10 +1,8 @@
 local F = require 'f'
 
-if not KK then
-  KK = {}
-end
+local lua = F.getlua(debug.getinfo(1)['source'])
 
-local k = 'LeaderCGKeys1'
+local k = lua .. 1
 
 KK[k] = {
   ['<leader><c-g>'] = { name = 'curline', },
